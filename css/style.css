@@ -1,0 +1,1024 @@
+/* default css start */
+/* fonts */
+@font-face {
+    font-family:"Poppins-Light";
+    src: url(../fonts/Poppins-Light.ttf);
+}
+@font-face {
+    font-family:"Poppins-Regular";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family:"Poppins-Medium";
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family:"Poppins-Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family:"Poppins-SemiBold";
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family:"Poppins-Black";
+    src: url(../fonts/Poppins-Black.ttf);
+}
+:root{
+    --main-color:#4361ee;
+    --color-1:#e91e63;
+    --color-2:#f5ae10;
+    --color-3:#09d69c;
+    --bg-dark:#2b2c2f;
+    --main-to-dark-color:var(--main-color);
+    --dark-to-main-color:var(--bg-dark);
+    --shadow-black-100:0 5px 15px rgba(0,0,0,0.1);
+    --shadow-black-300:0 5px 15px rgba(0,0,0,0.3);
+    --black-900:#000000;
+    --black-400:#555555;
+    --black-100:#f7f7f7;
+    --black-000:#ffffff;
+    --black-alpha:rgba(0,0,0,0.05);
+    --shadow-hover-200:0 5px 15px rgba(0,0,0,0.3);
+    --shadow-hover-400:0 0 10px 4px rgba(27, 227, 253, 0.2);
+
+}
+body{
+    font-family:"Poppins-Regular";
+    font-size:16px;
+    background-color: white;
+    overflow-x: hidden;
+}
+body.dark{
+    background-color: var(--bg-dark) ;
+    --black-100: var(--bg-dark);
+    --black-000: var(--bg-dark);
+    --main-to-dark-color:var(--bg-dark);
+    --dark-to-main-color:var(--main-color);
+    --shadow-black-100: var(--shadow-black-300);
+    --shadow-hover-200:var(--shadow-hover-400);
+    --black-alpha:rgba(255,255,255,0.05);
+    --black-900:#ffffff;
+    --black-400:#bbbbbb;
+    
+}
+a{
+    text-decoration: none;
+}
+body,p,span{
+    line-height: 30px;
+    color: var(--black-400);
+}
+/* primary-color:#4361ee */
+/* Annimation css start here */
+@keyframes spinone{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes updown{
+    0%,100%{
+        transform: translateY(-35px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+  
+}
+
+@keyframes playanimation{
+    0% ,30%{
+        transform: scale(0);
+        opacity:.7;
+    }
+    
+    50%{
+        transform: scale(1.3);
+        opacity: .4;
+    }
+    100%{
+        transform: scale(1.8);
+        opacity:0;
+    }
+}
+
+/* default css end */
+
+/* header area css start */
+.my-header{
+    padding: 20px 0;
+    background-color: transparent;
+    transition: .4s ease-in-out;
+    z-index: 999999;
+}
+.my-header.shrink{
+    box-shadow: var(--shadow-black-100);
+    padding: 15px 0;
+    background: var(--main-color);
+
+}
+.logo{
+    font-family:"Poppins-Medium";
+    font-size:30px;
+    color: #fff !important;
+}
+.logo span{
+    font-family:"Poppins-Bold";
+    font-size:40px;
+    color: white;
+
+}
+.header-menu ul li a{
+    margin: 0 25px !important;
+    padding: 0 !important;
+    color: #fff !important;
+    position: relative;
+}
+.header-menu ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1.5px;
+    background: #fff;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+}
+.header-menu ul li a:hover::before{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+/*================== header area css end ====================*/
+
+/* =================banner css start ========================*/
+.banner-area{
+    min-height: 100vh;
+    background-color: var(--main-to-dark-color);
+    padding-top: 160px;
+    padding-bottom: 100px;
+    border-radius: 0 0 170px 0;
+}
+.banner-caption{
+    color: #fff;
+}
+.banner-caption h1{
+    font-family:"Poppins-Bold";
+    font-size:46px;
+}
+.banner-caption p{
+   color: #fff;
+}
+.banner-btn a{
+    margin-top: 15px;
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    line-height:50px;
+    background: white;
+    color: var(--main-color);
+    text-align: center;
+    border-radius:30px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, .2);
+    transition: .4s;
+}
+.banner-btn a:hover{
+    background: #4361ee;
+    color: white !important;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, .4);
+}
+.video-play{
+    background: transparent;
+    border: none;
+}
+.play-btn{
+    margin-left: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #4361ee;
+    box-shadow: 0 0 10px 2px rgba(2, 2, 58, .5);
+    position: relative;
+    transition: .4s;
+}
+.play-btn:hover{
+    background: var(--main-color);
+    color: #fff;
+    box-shadow: var(--shadow-black-300);
+}
+.play-btn::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: #ffffff;
+   border-radius: 50%;
+   animation: playanimation 2s ease-in-out  infinite;
+}
+.banner-img{
+    position: relative;
+}
+.banner-img img {
+	max-width:260px;
+	animation: updown 3s linear infinite;
+}
+
+.circle {
+	position: absolute;
+	height:400px;
+	width:400px;
+	border: 1px solid rgb(207, 207, 207);
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+.circle::before{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    left: 30px;
+    top: 20px;
+    transform-origin: 170px 180px;
+    animation: spinone 10s linear infinite;
+}
+
+.effect-wrap .effect{
+    position: absolute;  
+}
+.effect-wrap .effect1{
+    top: 20%;
+    left: 20%;
+    font-size: 24px;
+    color: var(--color-2);
+    animation: spinone 5s linear infinite;
+}
+.effect-wrap .effect2{
+    top:10%;
+    right:10%;
+    font-size: 24px;
+    color: #a3a3a3;
+    animation: spinone 5s linear infinite;
+}
+.effect-wrap .effect3{
+    left:10%;
+    bottom:5%;
+    font-size: 24px;
+    color: var(--color-1);
+    animation:  updown 3s linear infinite;
+}
+/* =====================banner css end====================== */
+
+/* ===============features css start ================*/
+.features, .fun-fact-section, .app-sceenshots, .apps-download, .our-works, .client-testimonials, .pricing-plan, .team-section, .faq-section, .contact-us{
+    padding: 80px 0;
+}
+.default-title{
+    margin-bottom:50px;
+}
+.default-title h1{
+    font-family:"Poppins-Bold";
+    font-size: 45px;
+    color: var(--black-900);
+    
+
+}
+.default-title span{
+    font-family:"Poppins-Bold";
+    color:var(--main-color);
+}
+
+.feature-item{
+    margin: 15px;
+    padding:30px;
+    box-shadow: var(--shadow-black-100);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s ease-in;
+}
+.feature-item:hover{
+    box-shadow: var(--shadow-hover-200);
+}
+.feature-item::before,
+.feature-item::after{
+    content: "";
+    position: absolute;
+    transition: all .5s ease;
+    border-radius: 50%;
+}
+.feature-item::before{
+    left:-25px;
+    top: 40%;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-1);
+}
+.feature-item:hover::before{
+    left:15px;
+}
+.feature-item::after{
+    right:-35px;
+    bottom:18%;
+    width:35px;
+    height:35px;
+    background-color: var(--color-2);
+}
+.feature-item:hover::after{
+    right:-15px;
+}
+.feature-item:hover h3{
+    color:var(--main-color);
+}
+.feature-item .icon{
+    display: inline-block;
+    margin:20px 40px;
+    font-size:30px;
+    color: var(--main-color);
+    width:60px;
+    height:60px;
+    line-height:60px;
+    text-align: center;
+    position: relative;
+    transition: all .5s ease;
+    z-index:99;
+
+}
+.feature-item:hover .icon{
+  color: #fff;
+}
+.feature-item .icon::after{
+    content: "";
+    position: absolute;
+    left:120%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all .5s ease;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+.feature-item:hover .icon::after{
+    left: 0;
+    border-radius: 50%;
+    visibility: visible;
+    opacity: 1;
+
+}
+.feature-item h3{
+    font-size: 22px;
+    transition: .5s;
+    color: var(--black-900);
+}
+.feature-item p{
+    color: var(--black-40000);
+}
+.owl-carousel .owl-dots{
+    margin-top: 30px !important;
+    padding: 0 15px;
+    display: block !important;
+    text-align: center;
+
+}
+.owl-carousel button.owl-dot{
+	width: 25px;
+    height:7px;
+    background: #ddd;
+    display:inline-block;
+    margin: 0 5px;
+    border-radius: 30px;
+}
+.owl-carousel button.owl-dot.active{
+background-color: var(--main-color);
+}
+/* ========features css end ==============*/
+/* ===================some fun fact css start ==================*/
+.fun-fact-section{
+    background-color: var(--black-100);
+}
+.fun-fact-left-img{
+    text-align: center;
+}
+.fun-fact-left-img img{
+    width:280px;
+}
+.fun-fact-right p{
+    margin-bottom:-20px;
+}
+.fact-item{
+    margin-top: 20px;
+    padding:30px;
+    text-align: center;
+    box-shadow: var(--shadow-black-100);
+
+}
+.style1{
+    margin-top:50px;
+    background-color: var(--color-1);
+    border-radius: 15px;
+}
+.style2{
+    background-color: var(--color-2);
+    border-radius: 15px;
+}
+.style3{
+    margin-top:25px;
+    background-color: var(--color-3);
+    border-radius: 15px;
+}
+.style4{
+    margin-top:-5px;
+    background: var(--main-color);
+    border-radius: 15px;
+}
+.fact-item h1{
+    font-family:"Poppins-Bold";
+    font-size: 30px;
+    color: white;
+}
+.fact-item span{
+    text-transform: uppercase;
+    color: white;
+}
+/* =================some fun fact css end ===================*/
+
+/* App sceenshot css start */
+.sceenshot-item{
+   margin:10px;
+}
+.sceenshot-item img{
+   width: 100%;
+   max-width: 290px;
+   display: block;
+   margin: auto;
+}
+/* ===============App sceenshot css end================== */
+/*=================== Apps Download css start================= */
+.apps-download{
+    background: url(../imgs/download-app-bg.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    transition: .4s ease-in-out;
+}
+.apps-download:hover .download-item{
+    box-shadow: var(--shadow-hover-200);
+}
+.apps-download::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-to-dark-color);
+    opacity: .8;
+    z-index: -1;
+}
+.download-item {
+	margin-top: 25px;
+	padding: 35px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: var(--black-000);
+	opacity: .8;
+	box-shadow: var(--shadow-black-100);
+	transition: .4s ease-in-out;
+}
+.google-play i{
+    display: inline-block;
+    font-size: 32px;
+    color: var(--main-color);
+}
+.item-text h3{
+    margin: 15px 0;
+    font-size: 26px;
+    color: var(--black-900);
+}
+.item-text p{
+   color: var(--black-400);
+}
+.download-btn a{
+    color:#fff !important;
+    background: var(--main-color);
+}
+.download-btn a:hover{
+    background: white;
+    color: black !important;
+    box-shadow: -1px 1px 5px 0px #e6e6e699, -1px -1px 5px 0px #e6e6e699, -5px -5px 10px 0px #d6d6d622, 3px 3px 5px 0px #d6d6d622, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #d6d6d622, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #d6d6d622;
+}
+/*================== Apps Download css end================= */
+
+/* =====================how it works css start=================== */
+.how-it-work-item{
+    padding:20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.how-it-work-item.line-right::before{
+    content: "";
+    position: absolute;
+    top:48px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    z-index: -1;
+ 
+}
+.how-it-work-item h3{
+   margin-top: 25px;
+   margin-bottom: 15px;
+   color: var(--black-900);
+   font-size: 23px;
+}
+.step{
+    margin-bottom: 10px;
+    font-family:"Poppins-Medium";
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+}
+/*====================== how it works css end ===================*/
+
+/*==================== client testimonials css start================== */
+.client-testimonials{
+   background-color: var(--black-100);
+}
+.client-item{
+    margin: 15px;
+    padding:30px;
+    text-align: center;
+    box-shadow: var(--shadow-black-100);
+    background-color: var(--black-000);
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+}
+.client-item:hover{
+    box-shadow: var(--shadow-hover-200);
+}
+.client-img{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: inline-block;
+}
+.client-img img{
+    border-radius: 50%;
+    width: 100%;
+    max-width:80px;
+    border:4px solid var(--main-color);
+}
+.p-quote{
+    width:25px;
+    height:25px;
+    line-height:25px;
+    text-align: center;
+    background: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 17px;
+    position: absolute;
+    top:40px;
+    right:-9px;  
+}
+.client-bio p{
+    margin: 15px 0;
+}
+.client-bio h3{
+    font-size: 22px;
+    color: var(--black-900);
+}
+.client-bio span{
+    color: var(--black-400);
+}
+.rating ul li{
+    margin: 0 3px;
+    color: var(--color-2);
+}
+/*===================== client testimonials css end ===================*/
+/*===================== pricing plan css start================== */
+.pricing-item{
+    margin-top: 25px;
+    padding: 40px 30px;
+    box-shadow: var(--shadow-black-100);
+    position: relative;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    border-radius: 10px;
+}
+.pricing-item:hover{
+    box-shadow: var(--shadow-hover-200);
+}
+.pricing-item::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:40px;
+  height:90px;
+  background-color: var(--main-color);
+  transform: skewX(45deg);
+}
+.pricing-title h3{
+    font-family:"Poppins-Medium";
+    color: var(--black-900);
+}
+.pricing-head-main h1{
+    margin: 30px 0;
+    font-family:"Poppins-Bold";
+    font-size:70px;
+    color: var(--main-color);
+}
+.pricing-head-main .dollor{
+    font-family:"Poppins-Regular";
+    font-size: 16px;
+    position: relative;
+    top: -40px;
+    color: var(--main-color);
+}
+.pricing-head-main .monthly{
+    font-family:"Poppins-Regular";
+    font-size: 16px;
+    color: var(--black-400);
+}
+
+.pricing-list li{
+    margin:0;
+    padding:6px 0;
+    color: var(--black-400);
+    border-bottom: 1px solid var(--black-alpha);
+}
+.pricing-list li:last-child{
+    border-bottom: none;
+}
+.pricing-list li span{
+    margin-right: 10px;
+    color: var(--main-color);
+
+}
+/*====================== pricing plan css end======================= */
+
+/* ===================team css start===================== */
+.team-section{
+   background: var(--black-100);
+}
+.team-item{
+    padding: 20px;
+    margin-top: 25px;
+    margin:15px;
+   box-shadow: var(--shadow-black-100);
+   background-color: var(--black-000);
+   transition: .4s ease-in-out;
+}
+.team-item:hover{
+    box-shadow: var(--shadow-hover-200);
+}
+.team-img img{
+    width: 100%;
+}
+.team-bio{
+    margin-top: 15px;
+}
+.team-bio h3{
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: var(--black-900);
+}
+.team-bio span{
+    color: var(--black-400);
+}
+/*========================= team css end================== */
+/*======================= faq css start================= */
+.acd-item {
+	border: none;
+}
+.acd-button:not(.collapsed) {
+    box-shadow: none;
+    background: var(--main-color);
+    color: white;
+}
+.acd-button:not(.collapsed), .acd-button::after{
+    background-image: none;
+}
+.acd-button:not(.collapsed)::after {
+    content:"\f2d1";
+    font-family:"Font Awesome 6 Free";
+    font-weight: 600;
+    margin-top:10px;   
+}
+.acd-button::after {
+    content:"\f067";
+    font-family:"Font Awesome 6 Free";
+    font-weight: 600;
+    margin-top:10px;
+}
+.acd-button{
+   box-shadow: var(--shadow-black-100);
+    margin-top: 25px;
+    font-size:18px;
+    color:var(--black-900);
+    background: var(--black-100);
+}
+.accordion-body {
+	background-color: var(--black-000) !important;
+    color: var(--black-400);
+}
+.acd-button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+/*===================== faq css end================== */
+
+/*==================== contact css start ====================*/
+.contact-us{
+    background-color: var(--black-100);
+}
+.contact-location h3{
+    margin-bottom:40px;
+    font-size: 25px;
+    color: var(--black-900);
+}
+.contact-info ul li{
+    margin: 20px 0;
+}
+.contact-info ul li span{ 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    margin-right: 15px;   
+}
+.form-control{
+    border-radius: 30px;
+    height: 45px;
+    box-shadow: var(--shadow-black-100);
+    background: var(--black-000);
+    color: var(--black-100);
+}
+.message-box{
+    height:inherit;
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--main-color);
+    background-color: var(--black-000);
+    color: var(--black-400);
+}
+.contact-submit{
+    background: var(--main-color);
+    color: #fff;
+    padding:10px 30px;
+    border-radius: 30px;
+
+}
+.contact-submit{
+    background: var(--main-color);
+    color: white;
+    padding:10px 30px;
+    border-radius: 30px;
+}
+.contact-submit:hover{
+    color: var(--black-400) !important;
+    background: #fff !important;
+    box-shadow: var(--shadow-black-100);
+}
+/* ========================contact css end=================== */
+
+/*================ footer css start================== */
+.footer-top{
+    padding: 60px 0;
+    background:var(--main-color);
+    border-bottom: 1px solid #afafaf;
+}
+.footer-widget h3{  
+    margin-bottom: 20px;  
+    font-size:24px;
+    color: #ffffff;
+}
+.footer-widget p{  
+    color: #ffffff;
+}
+.footer-link ul li a{
+    color: #ffffff !important;
+    transition: .4s;
+}
+.footer-link ul li a:hover{
+    color: #dadada !important;
+    letter-spacing:1px;
+}
+.footer-bottom{
+    background: var(--main-color);
+    padding: 20px 0;
+}
+.footer-copyright p{
+    margin-bottom: 0;
+    color: #fff;
+}
+/*===================== footer css end==================== */
+
+/* ============toggle theme light mood and dark mood css=========== */
+.toggle-theme{
+    position: fixed;
+    top:50%;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: var(--dark-to-main-color);
+    font-size: 18px;
+    z-index:999999;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow-black-100);
+    color: #fff;
+
+}
+
+/*=============Toggler Responsive Css Start================== */
+@media(max-width: 991.99px){
+    .navbar-toggler{
+        border: none;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        background:#4361ee;
+        color: white !important; 
+        box-shadow: 1px 1px 10px 2px rgba(2, 2, 56, .3);
+
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+        box-shadow: 1px 1px 10px 2px rgba(2, 2, 56, .3);
+    }
+    .navbar-nav {
+      box-shadow: 1px 1px 10px 2px rgba(2, 2, 56, .3);
+      padding: 20px 0;
+      border-radius: 4px;
+      margin-top: 10px;
+      background: var(--main-color);
+    }
+    .header-menu ul li{
+        margin: 5px 0;
+    }
+    .header-menu ul li a{
+        display: inline-block;
+    }
+    
+}
+
+/*=============START SCROLL TO TOP============*/
+.topcontrol {
+	background: #4361ee none repeat scroll 0 0;
+	border-radius: 30px;
+	bottom: 5px;
+	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+	color: #fff;
+	cursor: pointer;
+	font-size: 22px;
+	height:45px;
+    width: 45px;
+	line-height:45px;
+	opacity: 1;
+	position: fixed;
+	right: 5px;
+	text-align: center;
+	transition: all 0.2s ease 0s;
+    z-index: 9;
+}
+.topcontrol:hover {
+    background:#212529;
+    color: #fff;
+}
+/*===============END SCROLL TO TOP===============*/
+
+
+/* --------------------------------------
+   2. Loading
+-----------------------------------------*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgb(72, 52, 255) 0%, rgb(147, 106, 250) 100%);
+    z-index: 999999;
+}
+
+.preloader .loading-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.preloader .loading-inner:before,
+.preloader .loading-inner:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: loading 2s linear infinite;
+    opacity: 0;
+}
+
+.preloader .loading-inner:before {
+    animation-delay: .5s;
+}
+
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 0; 
+    }
+}
+
+@keyframes loading {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 0; 
+    }
+}

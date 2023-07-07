@@ -1,0 +1,174 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .features, .fun-fact-section, .app-sceenshots, .apps-download, .our-works, .client-testimonials, .pricing-plan, .team-section, .faq-section, .contact-us {
+        padding: 40px 0;
+    }
+    .default-title h1 {
+        font-size: 35px;   
+    }
+    /*================== banner media css start============== */
+    .banner-caption {
+        margin-top: 30px;
+    }
+    .banner-caption h1 {
+        font-size: 32px;
+    }
+    .circle {
+        height:290px;
+        width:290px;
+    }
+    .circle::before{
+        content: "";
+        position: absolute;
+        width:50px;
+        height:50px;
+        left:16px;
+        top:18px;
+        transform-origin:126px 126px;
+    }
+
+    /*================= Feature media css start ================*/
+    .feature-item {
+        margin: 10px;
+        padding: 15px;
+    }
+     /*================ Fun fact media csss ==================*/
+      .mb-mt-small{
+        margin-top: 16px;
+        margin:20px;
+    }
+    .style4 {
+        margin-top: 25px;
+    }
+
+     /*================== How it work media css==============*/
+     .how-it-work-item.line-right::before{
+        width:1px;
+        height:100%;
+        background: var(--black-alpha);
+    }
+
+    /*=================== Client testimonials================ */
+    .client-item {
+        margin: 10px;
+        padding:20px 16px;
+    }
+    .team-item {
+        padding: 15px;
+        margin: 10px; 
+    }
+
+    /* ================faq media css start============ */
+    .acd-button{
+         font-size:16px;
+       
+     }
+ 
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .features, .fun-fact-section, .app-sceenshots, .apps-download, .our-works, .client-testimonials, .pricing-plan, .team-section, .faq-section, .contact-us {
+        padding: 50px 0;
+    }
+     /*================banner media css start ============= */
+     .banner-caption {
+        margin-top: 30px;
+    }
+    .banner-caption h1 {
+        font-size: 40px;
+    }
+
+    /* ================Fun fact media csss ==================*/
+    .mb-mt-small{
+        margin-top: 16px;
+        margin: 30px;
+    }
+    /*================ How it work media css==============*/
+    .how-it-work-item.line-right::before{
+        width:1px;
+        height:100%;
+        background: var(--black-alpha);
+    }
+
+    .contact-location{
+        margin-bottom:40px;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+     /*banner media css start ============= */
+     .banner-caption h1 {
+        font-size: 40px;
+    }
+     .banner-img img{
+        max-width:250px;
+    }
+    .circle {
+        height:320px;
+        width:320px;
+    }
+    .circle::before{
+        content: "";
+        position: absolute;
+        width:60px;
+        height:60px;
+        left:18px;
+        top:18px;
+        transform-origin:142px 142px;
+    }
+
+    /*=============== Feature media css start================ */
+    .feature-item {
+        padding: 30px 35px;
+      
+    }
+
+    /*===================== App sceenshoot section============ */
+    .sceenshot-item img {
+        max-width: 260px;
+      
+    }
+
+    /*================ How It Work Sec Media Css */
+    .how-it-work-item.line-md-sceen::before{
+        display: none;
+    }
+
+
+
+ }
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+     /*==============banner media css start ============= */
+    .banner-img img{
+        max-width:300px;
+    }
+    .banner-caption h1{
+        font-size:50px;
+    }
+
+    /*================ App download css start==============*/
+    .download-item{
+        padding: 40px;
+       
+    }
+
+
+
+ }
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .banner-caption h1{
+        font-size:50px;
+    }
+
+ }
